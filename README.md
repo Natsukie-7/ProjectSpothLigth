@@ -1,2 +1,0 @@
-# ProjectSpothLigth
-Projeto clonando spotfy
