@@ -3,9 +3,11 @@
 Para inicializar o servidor, siga estas etapas:
 
 1. Certifique-se de estar na pasta raiz do projeto.
-2. Execute o seguinte comando no terminal:
+2. Certifique de ter o composer instalado na máquina.
+3. Execute o seguinte comando no terminal:
 
     ```
+    composer du
     composer run server
     ```
 
