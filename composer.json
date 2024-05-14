@@ -14,5 +14,8 @@
             "email": "nathanfxs17@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "config": { 
+        "process-timeout": 0 
+    }
 }
