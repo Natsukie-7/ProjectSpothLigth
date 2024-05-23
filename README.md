@@ -25,5 +25,8 @@ Por motivos de segurança, siga estas etapas após baixar este repositório:
 
 ---
 
+**Repositorios usados**
+vlucas/phpdotenv
+
 Se precisar de mais ajuda ou encontrar problemas durante a configuração, sinta-se à vontade para entrar em contato ou abrir uma issue. Estamos aqui para ajudar!
 
