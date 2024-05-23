@@ -30,3 +30,7 @@ function render(string $view, array $data = []) {
         echo $err;
     }
 }
+
+function redirect(string $target) {
+    header('Location:'. $target);
+}
