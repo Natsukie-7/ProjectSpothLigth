@@ -3,6 +3,9 @@
 return [
     "get"=> [
         "/" => "HomeController@index",
+        "/account-connect"=> "AccountConnectController@index",
     ],
-    "post"=> []
+    "post"=> [
+        "/login"=> "LoginController@store",
+    ]
 ];
