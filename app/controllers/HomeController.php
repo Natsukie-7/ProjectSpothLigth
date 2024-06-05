@@ -6,6 +6,6 @@ class HomeController
 {
     public function index()
     {
-        render('Home', ['name' => 'nathan']);
+        render('Home', ['title' => 'SpothLigth - Home']);
     }
 }

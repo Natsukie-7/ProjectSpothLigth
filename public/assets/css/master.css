@@ -1,0 +1,22 @@
+body {
+    color: var(--white);
+    display: flex;
+
+    aside {
+        min-width: 12rem;
+        width: 30vw;
+
+        nav {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    main {
+        width: 70vw;
+
+        header {
+            height: 5rem;
+        }
+    }
+}

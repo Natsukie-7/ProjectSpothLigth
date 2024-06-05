@@ -17,6 +17,12 @@ class Router
 
         [$controller, $action] = explode("@", $routes[$this->request][$this->path]);
 
+        if (str_contains($action, ":")) {
+            [$action, $auth] = explode(':', $action);
+
+            Auth::check($auth);
+        }
+
         $controllerNameSpace = "app\\controllers\\{$controller}";
 
         $this->validateController($controllerNameSpace, $controller, $action);

@@ -1,5 +1,6 @@
 <?php
 
+use app\framework\classes\Macros;
 use app\framework\classes\Router;
 use app\framework\classes\Engine;
 
@@ -25,12 +26,24 @@ function routerExecute() {
 function render(string $view, array $data = []) {
     try {
         $engine = new Engine;
+        $engine->dependecies([new Macros]);
         echo $engine->render($view, $data);
     } catch (\Throwable $err) {
         echo $err;
     }
 }
 
+function getCommomTemplate(string $template) {
+    $path = dirname(__FILE__, 2);
+    $file = "$path/resources/templates/$template.php";
+
+    if (file_exists($file)) {
+        return $file;
+    } else {
+        return false;
+    }
+}
+
 function redirect(string $target) {
-    header('Location:'. $target);
+    return header('Location:'. $target);
 }
