@@ -2,10 +2,14 @@
 
 return [
     "get"=> [
-        "/home" => "HomeController@index",
-        "/authentication"=> "AuthenticationController@index",
+        "/" => "HomeController@index",
+        "/logout" => "LoginController@logout",
+        "/login/status" => "LoginController@getStatus",
+        "/authentication/login" => "AuthenticationController@login",
+        "/authentication/register" => "AuthenticationController@register",
     ],
     "post"=> [
-        "/login"=> "AuthenticationController@login",
+        "/authentication/login"=> "LoginController@bind",
+        "/authentication/register"=> "LoginController@store",
     ]
 ];
