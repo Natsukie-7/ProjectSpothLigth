@@ -41,15 +41,14 @@ class LoginController
     }
 
     public function store() {
-        $picture = strip_tags($_POST['picture']);
+        $picture = $_FILES['picture']['tmp_name'];
         $name = strip_tags($_POST['name']);
         $user_type = strip_tags($_POST['user_type']);
         $email = strip_tags($_POST['email']);
         $password = strip_tags($_POST['password']);
 
-        echo var_dump($_POST);
-
-        die();
+        $fileContent = file_get_contents($picture);
+        $fileContentBase64 = base64_encode($fileContent);
     
         if (empty($name) || empty($email) || empty($password) || empty($user_type)) {
             echo "Nome, email, senha ou tipo de usuário inválidos";
@@ -67,7 +66,7 @@ class LoginController
         }
     
         $prepare = $connection->prepare("INSERT INTO users (nome, email, senha, user_type, user_picture) VALUES (:name, :email, :password, :user_type, :picture)");
-        $prepare->execute(['name' => $name, 'email' => $email, 'password' => $password, 'user_type' => $user_type, 'picture' => !empty($picture) ? $picture : '']);
+        $prepare->execute(['name' => $name, 'email' => $email, 'password' => $password, 'user_type' => $user_type, 'picture' => !empty($fileContentBase64) ? "data:image/jpeg;base64,$fileContentBase64" : '']);
     
     
         $prepare = $connection->prepare("SELECT * FROM users WHERE email = :email");

@@ -18,7 +18,7 @@
     
     <main>
         <h1>Se registre e comece a curtir</h1>
-        <form action="/authentication/register" method="post">
+        <form action="/authentication/register" method="post" enctype="multipart/form-data">
             <div class="input-label">
                 <label for="picture">Foto de perfil:</label>
                 <input type="file" id="picture" name="picture" accept="image/*">
@@ -49,6 +49,10 @@
             
             <input class="submit" type="submit" value="Cadastrar">
         </form>
+
+        <script>
+            
+        </script>
 
         <div class="action-container">
             <span>Já tem uma conta? <a href="/authentication/login">Faça login aqui.</a></span>
