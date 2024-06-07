@@ -7,6 +7,7 @@ Para inicializar o servidor, siga estas etapas:
 3. Execute o seguinte comando no terminal:
 
     ```
+    composer install
     composer du
     composer run server
     ```
