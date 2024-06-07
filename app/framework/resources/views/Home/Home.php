@@ -1,3 +1,11 @@
 <?php $this->extends('Master', ['title' => $title]); ?>
 
-<h2>homePage</h2>
+<div>
+    <h1>Artistas:</h1>
+
+    <div id="artist-list">
+
+    </div>
+</div>
+
+<script src="./assets/js/home.js"></script>

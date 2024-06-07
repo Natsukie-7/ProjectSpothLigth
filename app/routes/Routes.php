@@ -3,6 +3,7 @@
 return [
     "get"=> [
         "/" => "HomeController@index",
+        "/data/artist" => "HomeController@getArtists",
         "/logout" => "LoginController@logout",
         "/login/status" => "LoginController@getStatus",
         "/authentication/login" => "AuthenticationController@login",
