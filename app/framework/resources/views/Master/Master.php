@@ -16,21 +16,28 @@
     <title><?php echo $title; ?></title>
 </head>
 <body>
-    <?php require "MenuEsquerdo.php" ?>
-
-    <main>
-        <?php require "Header.php" ?>
-
-        <div id="container">
-            <?php echo $this->load(); ?>
+    <div class="content">
+        <div>
+            <?php require "MenuEsquerdo.php" ?>
+        
+            <main>
+                <?php require "Header.php" ?>
+        
+                <div id="container">
+                    <?php echo $this->load(); ?>
+                </div>
+            </main>
+        
+            <a href="/addContent" class="add-anchor">
+                <div id="add-content">
+                    +
+                </div>
+            </a>
         </div>
-    </main>
-
-    <a href="/addContent" class="add-anchor">
-        <div id="add-content">
-            +
-        </div>
-    </a>
+        <footer>
+            <p>criadores: nathan e gui</p>
+        </footer>
+    </div>
     <?php if (isset($childScripts))  {
         foreach($childScripts as $script) {
             echo '<script src="' . $script . '"></script>';

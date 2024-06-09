@@ -16,15 +16,16 @@ header {
     padding: 1rem;
     width: var(--page-width);
     
-    .logo-container {
-        width: 5rem;
+}
 
-        > img {
-            width: 100%;
-            object-fit: cover;
-        }
+.logo-container {
+    width: 10rem;
+    > img {
+        width: 100%;
+        object-fit: cover;
     }
 }
+
 
 main {
     width: var(--page-width);

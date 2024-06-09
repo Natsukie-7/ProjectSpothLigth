@@ -8,7 +8,7 @@
     ]
     ]); ?>
 
-<div id="home-container">
+<content id="home-container">
     <div>
         <h2>Artistas:</h2>
 
@@ -20,4 +20,4 @@
 
         <div id="music-list"></div>
     </div>
-</div>
+</content>
