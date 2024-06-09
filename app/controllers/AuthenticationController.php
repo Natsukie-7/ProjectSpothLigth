@@ -2,8 +2,6 @@
 
 namespace app\controllers;
 
-use app\framework\database\Connection;
-
 class AuthenticationController
 {
     public function login() {

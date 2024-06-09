@@ -1,0 +1,25 @@
+#home-container {
+    display: flex;
+    flex-direction: column;
+    #artist-list, #music-list {
+        display: flex;
+        gap: 1rem;
+
+        .artist-picture, .content-picture {
+            width: 10rem;
+            height: 10rem;
+
+            img {
+                border: 1px solid var(--white);
+                padding: 1rem;
+                object-fit: cover;
+                height: 100%;
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}

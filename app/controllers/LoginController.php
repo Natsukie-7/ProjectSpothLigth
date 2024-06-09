@@ -90,7 +90,9 @@ class LoginController
     
         $response = [
             "logged" => isset($_SESSION['logged']) && $_SESSION['logged'],
-            'userPicture' => $_SESSION['user']->user_picture
+            'userPicture' => $_SESSION['user']->user_picture,
+            'userType' => $_SESSION['user']->user_type,
+            'userId' => $_SESSION['user']->id
         ];
     
         echo json_encode($response);
