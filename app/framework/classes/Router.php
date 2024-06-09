@@ -8,6 +8,7 @@ class Router
 {
     private string $path;
     private string $request;
+    private ?int $idParam;
     
     public function execute($routes) {
         $this->path = path();
@@ -28,17 +29,25 @@ class Router
         $this->validateController($controllerNameSpace, $controller, $action);
 
         $controllerInstance = new $controllerNameSpace;
-        $controllerInstance->$action();
+        isset($this->idParam) 
+            ? $controllerInstance->$action($this->idParam)
+            : $controllerInstance->$action();
     }
     private function checkRouteUriExistence($routes) {
-        if(!isset($routes[$this->request])) {
+        if (!isset($routes[$this->request])) {
             throw new Exception("Route {$this->request} doesn't exist");
         }
-
-        if(!isset($routes[$this->request][$this->path])) {
+    
+        if (str_contains($this->path, '?')) {
+            [$this->path, $params] = explode('?', $this->path);
+            $this->idParam = $params ?? null;
+        }
+    
+        if (!isset($routes[$this->request][$this->path])) {
             throw new Exception("Route {$this->path} doesn't exist");
         }
     }
+    
 
     private function validateController(string $controllerNameSpace, string $controller, string $action) {
         if (!class_exists($controllerNameSpace)) {

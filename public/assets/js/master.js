@@ -21,14 +21,21 @@ function handleSuccess(xhr) {
       removeFinalizarSecao();
     }
 
-    const userPicture = response.userPicture;
-
+    const userPicture = response?.userPicture;
+    
     if (userPicture) {
-        const imgElement = document.querySelector('#user-picture');
-        imgElement.setAttribute('src', userPicture);
+      const imgElement = document.querySelector('#user-picture');
+
+
+      imgElement.setAttribute('src', userPicture);
     }
 
+    const userType = response?.userType;
+    const addButton = document.querySelector('#add-content');
 
+    if (!userType || userType != 'artist') {
+      addButton.remove();
+    }
   } else {
     console.error('Erro ao fazer a requisição:', xhr.statusText);
   }

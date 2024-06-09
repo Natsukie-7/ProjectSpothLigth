@@ -13,10 +13,55 @@ body {
     }
 
     main {
-        width: 70vw;
+        width: 100%;
 
         header {
-            height: 5rem;
+            #finalizar-secao {
+                display: flex;
+                justify-content: end;
+                margin-bottom: 3rem;
+
+                #user-picture-anchor {
+                    .user-picture {
+                        border: 1px solid var(--white);
+                        border-radius: 50%;
+                        width: 5rem;
+                        height: 5rem;
+                        overflow: hidden;
+    
+                        img {
+                            object-fit: cover;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
         }
+
+        #container {
+            padding-right: 1rem;
+        }
+    }
+
+    a.add-anchor {
+        text-decoration: none;
+        color: inherit;
+
+        #add-content {
+            position: fixed;
+            display: flex;
+            right: 2rem;
+            bottom: 2rem;
+            width: 3rem;
+            height: 3rem;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--magenta);
+            color: var(--dark-gray);
+            font-size: xx-large;
+            border: 1px solid var(--magenta);
+            border-radius: 50%;
+            cursor: pointer;
+        }    
     }
 }

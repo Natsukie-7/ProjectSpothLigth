@@ -1,0 +1,20 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .input-label {
+        width: 30rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        input, select {
+            width: 100%;
+        }
+    }
+
+    .submit {
+        width: 10rem;
+    }
+}

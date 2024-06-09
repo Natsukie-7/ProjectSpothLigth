@@ -1,11 +1,23 @@
-<?php $this->extends('Master', ['title' => $title]); ?>
+<?php $this->extends('Master', [
+    'title' => $title,
+    "childCss" => [
+        "./assets/css/home.css"
+        ],
+    "childScripts" => [
+        "./assets/js/home.js"
+    ]
+    ]); ?>
 
-<div>
-    <h1>Artistas:</h1>
+<div id="home-container">
+    <div>
+        <h2>Artistas:</h2>
 
-    <div id="artist-list">
+        <div id="artist-list"></div>
+    </div>
 
+    <div>
+        <h2>Musicas:</h2>
+
+        <div id="music-list"></div>
     </div>
 </div>
-
-<script src="./assets/js/home.js"></script>

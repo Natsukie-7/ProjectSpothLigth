@@ -2,8 +2,12 @@
 
 :root {
     --dark-gray: #121212;
+    --light-gray: #303030;
     --white: #fff;
     --success: #28a745;
+    --blue: #4D4DFF;
+    --magenta: #FF00FF;
+    --red: #8b0000;
 }
 
 * {
@@ -16,11 +20,9 @@
 
 body {
     background-color: var(--dark-gray);
-    width: 100vw;
-    height: 100vh;
 }
 
-input {
+input, textarea {
     background-color: unset;
     box-shadow: inset 0 0 0 1px #878787;
     color: #878787;
@@ -47,6 +49,11 @@ input.submit {
 
 input:hover {
     box-shadow: inset 0 0 0 1px rgb(39, 39, 39);
+}
+
+img {
+    object-fit: contain;
+    width: 100%;
 }
 
 .d-none {

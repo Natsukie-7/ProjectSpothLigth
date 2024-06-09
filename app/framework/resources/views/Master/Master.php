@@ -6,6 +6,13 @@
     <link rel="stylesheet" href="./assets/css/global.css"> <!-- Referencia do css global -->
     <link rel="stylesheet" href="./assets/css/master.css"> <!-- Referencia do css global -->
     <link rel="shortcut icon" href="./assets/imgs/spothlight-logo.ico" type="image/x-icon">
+
+    <?php if (isset($childCss))  {
+        foreach($childCss as $css) {
+            echo '<link rel="stylesheet" href="' . $css . '">';
+        }
+    } ?>
+
     <title><?php echo $title; ?></title>
 </head>
 <body>
@@ -19,6 +26,16 @@
         </div>
     </main>
 
+    <a href="/addContent" class="add-anchor">
+        <div id="add-content">
+            +
+        </div>
+    </a>
+    <?php if (isset($childScripts))  {
+        foreach($childScripts as $script) {
+            echo '<script src="' . $script . '"></script>';
+        }
+    } ?>
     <script src="./assets/js/master.js"></script>
 </body>
 </html>
