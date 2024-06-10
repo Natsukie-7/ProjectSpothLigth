@@ -1,9 +1,10 @@
 #home-container {
     display: flex;
     flex-direction: column;
+    gap: 2rem;
     #artist-list, #music-list {
         display: flex;
-        gap: 1rem;
+        gap: 2rem;
 
         .artist-picture, .content-picture {
             width: 10rem;

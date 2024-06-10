@@ -9,32 +9,29 @@
     <title>Loggar SpothLigth</title>
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="../assets/imgs/spothlight-logo.png" alt="logo SpothLigth">
-        </div>
-        
+    <header class="logo-container">
+        <img src="../assets/imgs/spothlight-logo.png" alt="logo SpothLigth">
     </header>
     
     <main>
         <h1>Faça o login e comece a curtir</h1>
         <form action="/authentication/login" method="post">
-            <div class="input-label">
+            <content class="input-label">
                 <label for="email">Endereço de e-mail</label>
                 <input type="email" id="email" name="email" placeholder="Inssira seu nome" required>
-            </div>
+            </content>
             
-            <div class="input-label">
+            <content class="input-label">
                 <label for="password">Senha:</label>
                 <input type="password" id="password" name="password" placeholder="*************" required>
-            </div>
+            </content>
             
             <input class="submit" type="submit" value="Cadastrar">
         </form>
 
-        <div class="action-container">
+        <content class="action-container">
             <span>Ainda não tem uma conta? <a href="/authentication/register">Se registre aqui.</a></span>
-        </div>
+        </content>
         
     </main>
 </body>

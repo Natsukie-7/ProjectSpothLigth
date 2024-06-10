@@ -9,11 +9,8 @@
     <title>Inscrever-se SpothLigth</title>
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="../assets/imgs/spothlight-logo.png" alt="logo SpothLigth">
-        </div>
-        
+    <header class="logo-container">
+        <img src="../assets/imgs/spothlight-logo.png" alt="logo SpothLigth">
     </header>
     
     <main>
